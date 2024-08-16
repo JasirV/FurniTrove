@@ -3,6 +3,8 @@ import NavBar from "../../components/NavBar";
 import ImgBg from "../../../assets/blue-sofa-removebg-preview.png";
 import Image from "next/image";
 import Arrow from '../../../assets/Arrow.png'
+import Chair1 from '../../../assets/chair1.png'
+import Chair2 from '../../../assets/cahir2.png'
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
@@ -83,12 +85,16 @@ const page = () => {
                 <button className="bg-[#94A8BF] p-4 rounded-lg mt-2 ">Buy Now</button>
                 </div>
                 <div className="w-1/2">
-                <div className="bg-secondary w-96 h-[570px] rounded-t-full relative bottom-52 left-72 "></div>
+                <div className="bg-secondary w-96 h-[570px] rounded-t-full relative bottom-52 left-72 ">
+                  <Image src={Chair1} alt="" />
+                </div>
                 </div>
               </div>
               <div className="h-1/2  flex">
               <div className="w-1/2 h-full">
-              <div className="bg-secondary w-96 h-[540px] rounded-t-full relative bottom-24 right-10 mb-10 mt-20"></div>
+              <div className="bg-secondary w-96 h-[540px] rounded-t-full relative bottom-24 right-10 mb-10 mt-20">
+              <Image src={Chair2} alt="" className="" />
+              </div>
               </div>
               <div className="w-1/2 p-20 flex flex-col items-center ">
              <h1 className="text-textcss font-semibold font-sans text-lg">As in the best seatin the house .Combining comfort andcreativity, our smashing reange of ar mchars features desingns to suit any style . Perhaps your looing foramid-century masterpiece master piecs</h1>
