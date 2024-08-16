@@ -38,7 +38,7 @@ const page = () => {
               />
               <div className="w-10/12 h-5 bg-secondary rounded-xl absolute top-96"></div>
             </div>
-            <div className="flex justify-around">
+            <div className="flex justify-around mt-5 mb-24">
               <div>
                 <Image src={Arrow} alt="" className=" w-40"/>
                 </div>
@@ -70,6 +70,33 @@ const page = () => {
               exterior design service</p>
               </div>
             </div>
+
+            <div className="flex mt-10 mb-56 justify-center">
+              <h1 className="text-accent text-4xl font-semibold font-sans">This Week Featured Product</h1>
+            </div>
+
+            <div className="flex justify-center mb-10">
+              <div className="bg-[#F2D8C7]  w-4/5 h-screen  rounded-3xl">
+              <div className="h-1/2  flex">
+                <div className="w-1/2 h-full p-20  flex flex-col items-center">
+                <h1 className="text-textcss font-semibold font-sans text-lg">Being able to sit back and relax in your favouite amchalistrulyoueofthegreatestfeelingsin ife That's wheywe' vecreated as tunning reange of lovingly hand make luxury armchairs, using only materais of the fine staquality . to ensure you have the best seat in the house</h1>
+                <button className="bg-[#94A8BF] p-4 rounded-lg mt-2 ">Buy Now</button>
+                </div>
+                <div className="w-1/2">
+                <div className="bg-secondary w-96 h-[570px] rounded-t-full relative bottom-52 left-72 "></div>
+                </div>
+              </div>
+              <div className="h-1/2  flex">
+              <div className="w-1/2 h-full">
+              <div className="bg-secondary w-96 h-[540px] rounded-t-full relative bottom-24 right-10 mb-10 mt-20"></div>
+              </div>
+              <div className="w-1/2 p-20 flex flex-col items-center ">
+             <h1 className="text-textcss font-semibold font-sans text-lg">As in the best seatin the house .Combining comfort andcreativity, our smashing reange of ar mchars features desingns to suit any style . Perhaps your looing foramid-century masterpiece master piecs</h1>
+             <button className="bg-secondary p-4 rounded-lg mt-5 ">Buy Now</button>
+              </div>
+              </div>
+              </div>
+            </div> 
     </div>
     
   );
