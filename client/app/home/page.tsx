@@ -77,8 +77,8 @@ const page = () => {
               <h1 className="text-accent text-4xl font-semibold font-sans">This Week Featured Product</h1>
             </div>
 
-            <div className="flex justify-center mb-10">
-              <div className="bg-[#F2D8C7]  w-4/5 h-screen  rounded-3xl">
+            <div className="flex justify-center mb-10 h-screen">
+              <div className="bg-[#F2D8C7]  w-4/5 h-full  rounded-3xl">
               <div className="h-1/2  flex">
                 <div className="w-1/2 h-full p-20  flex flex-col items-center">
                 <h1 className="text-textcss font-semibold font-sans text-lg">Being able to sit back and relax in your favouite amchalistrulyoueofthegreatestfeelingsin ife That's wheywe' vecreated as tunning reange of lovingly hand make luxury armchairs, using only materais of the fine staquality . to ensure you have the best seat in the house</h1>
@@ -90,10 +90,10 @@ const page = () => {
                 </div>
                 </div>
               </div>
-              <div className="h-1/2  flex">
-              <div className="w-1/2 h-full">
-              <div className="bg-secondary w-96 h-[540px] rounded-t-full relative bottom-24 right-10 mb-10 mt-20">
-              <Image src={Chair2} alt="" className="" />
+              <div className="h-1/2  flex ">
+              <div className="w-1/2">
+              <div className="bg-secondary w-96 h-[540px] rounded-t-full relative bottom-24 right-10 mb-10 mt-20 ">
+              <Image src={Chair2} alt="" className="scale-x-[-1]" />
               </div>
               </div>
               <div className="w-1/2 p-20 flex flex-col items-center ">
@@ -103,6 +103,18 @@ const page = () => {
               </div>
               </div>
             </div> 
+
+            <div className="flex justify-around mt-64 mb-24">
+              <div>
+                <Image src={Arrow} alt="" className=" w-40"/>
+                </div>
+              <div>
+                <h1 className="text-accent font-semibold font-sans text-4xl">Hot Deals For You</h1>
+              </div>
+              <div>
+              <Image src={Arrow} alt="" className="rotate-180 w-40"/>
+              </div>
+            </div>
     </div>
     
   );
