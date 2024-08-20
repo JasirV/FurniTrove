@@ -1,0 +1,53 @@
+/* Ensure proper spacing and transformations */
+.slick-slide {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-style: preserve-3d;
+    margin: 0 10px; /* Adjust for spacing between slides */
+  }
+  
+  .slick-slide img {
+    width: auto; /* Allow width to adjust based on height */
+    height: 100%; /* Ensure image fills the height of the slide */
+    border-radius: 15px;
+  }
+  
+  .slick-list {
+    margin: 0 -10px; /* Adjust to fit the slide's margin */
+  }
+  
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Fixed size and highlighting for the centered slide */
+  .slick-slide.slick-center {
+    width: 300px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    transform: scale(1) rotateY(0deg); /* Fixed size, no scaling */
+    opacity: 1;
+    z-index: 1; /* On top */
+  }
+  
+  /* Non-centered slides */
+  .slick-slide {
+    opacity: 0.6;
+    transform: scale(0.8) rotateY(-10deg); /* Smaller and rotated */
+    width: 300px; /* Ensure non-centered slides have the same width */
+    height: 300px; /* Ensure non-centered slides have the same height */
+  }
+  
+  .slick-slide.slick-prev {
+    transform: scale(0.8) rotateY(-10deg);
+    width: 150px; /* Ensure non-centered slides have the same width */
+    height: 150px;
+    
+    /* Previous slide transformation */
+  }
+  
+  .slick-slide.slick-next {
+    transform: scale(0.8) rotateY(10deg);
+    width: 150px; /* Ensure non-centered slides have the same width */
+    height: 150px; /* Next slide transformation */
+  }
+  
