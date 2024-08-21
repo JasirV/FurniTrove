@@ -9,6 +9,7 @@ import Chair2 from "../../../assets/cahir2.png";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
+import {products} from '../../data/productDetails'
 import Products from "../../data/productsData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,6 +17,15 @@ import "slick-carousel/slick/slick-theme.css";
 import './carouselStyles.css';
 
 const page = () => {
+  type Category = "Living Room" | "Bedroom" | "Dining Room" | "Office" | "Outdoor" | "Home Decor";
+  const categories: Category[] = [
+    "Living Room",
+    "Bedroom",
+    "Dining Room",
+    "Office",
+    "Outdoor",
+    "Home Decor"
+  ];
 
   const settings = {
     className: "center",
@@ -159,7 +169,7 @@ const page = () => {
                   <div key={i.index} className="flex justify-center items-center">
                     <Image
                       className=" sm:h-44 sm:w-44 rounded-full"
-                      src={i.img.toString()}
+                      src={i.img}
                       alt={i.index.toString()}
                     />
                   </div>
@@ -175,10 +185,43 @@ const page = () => {
           A Huge Collection Of Furniture
           </h1>
       </div>
-      <div className="bg-red-500 w-full h-10">
-
+      <div className=" w-11/12 m-auto h-10 flex justify-between items-center mb-10">
+      {categories.map((i,index)=>(
+        <div key={index} className="border-[#F7D8C4] border p-2 flex justify-center items-center">  
+          <div  className="bg-[#E5C8B2] w-40 rounded-xl text-center items-center flex p-3 justify-center text-textcss font-semibold font-sans">{i}</div>
+          </div>
+      ))}
       </div>
 
+      <div className=" w-full h-screen flex justify-center items-center">
+      <div className="flex flex-wrap w-11/12 justify-center gap-14">
+        {products.map((product) => (
+          <div key={product.id} className="w-60 border h-72 flex flex-col items-center p-4 border-textcss">
+            <Image 
+              src={product} 
+              alt={product.name} 
+              width={240} 
+              height={160} 
+              layout="intrinsic"
+              objectFit="cover"
+            />
+            <h2 className="mt-2 text-lg font-semibold text-accent">{product.name}</h2>
+            <p className="text-xl font-bold mt-1 text-textcss">${product.price.toFixed(2)}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="w-full bg-redd-500 h-screen flex  ">
+      <div className="w-1/2 h-full bg-blue-500"></div>
+      <div className="w-1/2 h-full bg-green-500 flex flex-col justify-between ">
+      <h1 className="text-3xl text-textcss ">We Are The Bigest
+      Furniture Brands</h1>
+      <h1 className="text-xl text-textcss ">over the yesrs we hane ahwires been at the boc of
+thefurmc.rolhaustasaoundmewonu,thadwy
+evew yoee besieves is the auasky ef our producis</h1>
+      </div>
+    </div>
     </div>
   );
 };
