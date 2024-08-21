@@ -105,13 +105,9 @@ const page = () => {
         <div className="bg-[#F2D8C7]  w-4/5 h-full  rounded-3xl">
           <div className="h-1/2  flex">
             <div className="w-1/2 h-full p-20  flex flex-col items-center">
-              <h1 className="text-textcss font-semibold font-sans text-lg">
-                Being able to sit back and relax in your favouite
-                amchalistrulyoueofthegreatestfeelingsin ife That's wheywe'
-                vecreated as tunning reange of lovingly hand make luxury
-                armchairs, using only materais of the fine staquality . to
-                ensure you have the best seat in the house
-              </h1>
+            <h1 className="text-textcss font-semibold font-sans text-lg">
+  Being able to sit back and relax in your favourite amchalistrulyoueofthegreatestfeelingsin life That&apos;s why we&apos;ve created a stunning range of lovingly handmade luxury armchairs, using only materials of the finest quality to ensure you have the best seat in the house.
+</h1>
               <button className="bg-[#94A8BF] p-4 rounded-lg mt-2 ">
                 Buy Now
               </button>
@@ -129,12 +125,10 @@ const page = () => {
               </div>
             </div>
             <div className="w-1/2 p-20 flex flex-col items-center ">
-              <h1 className="text-textcss font-semibold font-sans text-lg">
-                As in the best seatin the house .Combining comfort
-                andcreativity, our smashing reange of ar mchars features
-                desingns to suit any style . Perhaps your looing foramid-century
-                masterpiece master piecs
-              </h1>
+              
+<h1 className="text-textcss font-semibold font-sans text-lg">
+  As in the best seat in the house. Combining comfort and creativity, our smashing range of armchairs features designs to suit any style. Perhaps you&apos;re looking for a mid-century masterpiece.
+</h1>
               <button className="bg-secondary p-4 rounded-lg mt-5 ">
                 Buy Now
               </button>
