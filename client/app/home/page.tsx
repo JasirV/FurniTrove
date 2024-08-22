@@ -6,6 +6,7 @@ import Image from "next/image";
 import Arrow from "../../../assets/Arrow.png";
 import Chair1 from "../../../assets/chair1.png";
 import Chair2 from "../../../assets/cahir2.png";
+import mirror from '../../../assets/mir.png'
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
@@ -212,14 +213,17 @@ const page = () => {
       </div>
     </div>
 
-    <div className="w-full bg-redd-500 h-screen flex  ">
-      <div className="w-1/2 h-full bg-blue-500"></div>
-      <div className="w-1/2 h-full bg-green-500 flex flex-col justify-between ">
+    <div className="w-full bg-redd-500  flex  mt-10 mb-16 ">
+      <div className="w-1/2 p-5 flex justify-end">
+      <Image src={mirror} alt='mirror' className="w-96 min-h-96" />
+      </div>
+      <div className="w-1/2 h-full  flex flex-col justify-center gap-12 p-14 ">
       <h1 className="text-3xl text-textcss ">We Are The Bigest
       Furniture Brands</h1>
       <h1 className="text-xl text-textcss ">over the yesrs we hane ahwires been at the boc of
 thefurmc.rolhaustasaoundmewonu,thadwy
 evew yoee besieves is the auasky ef our producis</h1>
+<button className="bg-[#94A8BF] p-4 w-1/5 rounded-lg"> Shop More</button>
       </div>
     </div>
     </div>
