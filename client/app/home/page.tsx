@@ -16,6 +16,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './carouselStyles.css';
+import Footer from "@/components/Footer";
 
 const page = () => {
   type Category = "Living Room" | "Bedroom" | "Dining Room" | "Office" | "Outdoor" | "Home Decor";
@@ -35,7 +36,7 @@ const page = () => {
     slidesToShow: 3,
     centerPadding: "0px",
     speed: 500,
-    initialSlide: 1, // Start with the second slide centered
+    initialSlide: 1, 
   };
   return (
     <div>
@@ -226,6 +227,7 @@ evew yoee besieves is the auasky ef our producis</h1>
 <button className="bg-[#94A8BF] p-4 w-1/5 rounded-lg"> Shop More</button>
       </div>
     </div>
+    <Footer/>
     </div>
   );
 };
