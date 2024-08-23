@@ -171,7 +171,8 @@ const page = () => {
                   <div key={i.index} className="flex justify-center items-center">
                     <Image
                       className=" sm:h-44 sm:w-44 rounded-full"
-                      src={i.img}
+                      src={i.img as string}
+                      // src={i.img}
                       alt={i.index.toString()}
                     />
                   </div>
