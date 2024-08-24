@@ -41,44 +41,44 @@ const page = () => {
   return (
     <div>
       <NavBar />
-      <div className="flex ">
-        <div className=" w-1/2 h-screen">
-          <h1 className="text-textcss text-7xl font-sans font-bold ml-20 mt-14">
+      <div className="flex">
+        <div className=" md:w-1/2 md:h-screen  w-full">
+          <h1 className="text-textcss text-4xl font-sans font-bold ml-20 mt-14 md:text-7xl">
             Modern <br /> Furniture
           </h1>
-          <h4 className="text-accent text-lg font-sans font-semibold ml-20 mt-10">
+          <h4 className="text-accent text-sm font-sans font-semibold ml-20 mt-10 md:text-lg">
             we combine interior and exterior design
             <br /> service and often provide them as a single <br /> solution
           </h4>
-          <div className="flex gap-5 ml-20 mt-10">
-            <button className="bg-[#94A8BF] p-4 rounded-lg">Shop Now </button>
-            <button className="bg-secondary p-4 rounded-lg">Start Now</button>
+          <div className="flex gap-2 ml-20 mt-10 md:gap-5">
+            <button className="bg-[#94A8BF] p-2 md:text-lg text-xs rounded-lg md:p-4">Shop Now </button>
+            <button className="bg-secondary p-2 md:text-lg text-xs rounded-lg md:p-4">Start Now</button>
           </div>
         </div>
-        <div className=" w-1/2 h-screen grid overflow-hidden">
+        <div className=" w-1/2 h-screen  overflow-hidden hidden md:grid">
           <div className="bg-secondary h-2/3 w-2/3 rounded-full relative top-[3px] left-[300px]"></div>
         </div>
       </div>
-      <div className="absolute flex-col justify-center items-center top-48 right-72  h-[430px] w-[770px]  ">
-        <Image src={ImgBg} alt="" className="w-full h-full object-cover" />
-        <div className="w-10/12 h-5 bg-secondary rounded-xl absolute top-96"></div>
+      <div className="absolute flex-col justify-center items-center top-48 right-72  h-[430px] w-[770px] hidden md:flex">
+        <Image src={ImgBg} alt="" className="w-full h-full object-cover hidden md:flex " />
+        <div className="w-10/12 h-5 bg-secondary rounded-xl absolute top-96 hidden md:flex"></div>
       </div>
-      <div className="flex justify-around mt-5 mb-24">
+      <div className="flex justify-around mt-10 mb-2 4">
         <div>
-          <Image src={Arrow} alt="" className=" w-40" />
+          <Image src={Arrow} alt="" className=" w-40 hidden md:flex" />
         </div>
         <div>
-          <h1 className="text-accent font-semibold font-sans text-4xl">
+          <h1 className="text-accent font-semibold font-sans md:text-4xl text-2xl ">
             Hot Deals For You
           </h1>
         </div>
         <div>
-          <Image src={Arrow} alt="" className="rotate-180 w-40" />
+          <Image src={Arrow} alt="" className="rotate-180 w-40 hidden md:flex" />
         </div>
       </div>
 
-      <div className="flex justify-center mt-12 mb-12">
-        <div className="p-10 flex flex-col justify-between gap-3 bg-seBg">
+      <div className="flex flex-col justify-center mt-12 mb-12 md:flex md:flex-row p-2 md:p-0 gap-2 md:gap-0">
+        <div className="p-10 flex flex-col items-center justify-center gap-3 bg-seBg md:items-start">
           <LiaShippingFastSolid size={65} className="text-textcss" />
           <h1 className="text-textcss text-2xl font-semibold font-sans">
             Free Shopping
@@ -87,7 +87,7 @@ const page = () => {
             we combine interior and exterior design service
           </p>
         </div>
-        <div className="p-10 flex flex-col justify-between bg-seBg">
+        <div className="p-10 flex flex-col justify-center items-center bg-seBg md:items-start">
           <GiTakeMyMoney size={65} className="text-textcss" />
           <h1 className="text-textcss text-2xl font-semibold font-sans">
             Free Shopping
@@ -96,7 +96,7 @@ const page = () => {
             we combine interior and exterior design service
           </p>
         </div>
-        <div className="p-10 flex flex-col justify-between bg-seBg">
+        <div className="p-10 flex flex-col justify-center items-center bg-seBg md:items-start">
           <TiMessages size={65} className="text-textcss" />
           <h1 className="text-textcss text-2xl font-semibold font-sans">
             Free Shopping
@@ -108,7 +108,7 @@ const page = () => {
       </div>
 
       <div className="flex mt-10 mb-56 justify-center">
-        <h1 className="text-accent text-4xl font-semibold font-sans">
+        <h1 className="text-accent  font-semibold font-sans md:text-4xl text-2xl">
           This Week Featured Product
         </h1> 
       </div>
@@ -201,7 +201,7 @@ const page = () => {
         {products.map((product) => (
           <div key={product.id} className="w-60 border h-72 flex flex-col items-center p-4 border-textcss">
             <Image 
-              src={product} 
+              src={product.id} 
               alt={product.name} 
               width={240} 
               height={160} 
