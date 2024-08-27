@@ -43,10 +43,10 @@ const page = () => {
       <NavBar />
       <div className="flex">
         <div className=" md:w-1/2 md:h-screen  w-full">
-          <h1 className="text-textcss text-4xl font-sans font-bold ml-20 mt-14 md:text-7xl">
+          <h1 className="text-textcss text-4xl font-sans font-bold ml-20 mt-14 md:text-3xl lg:text-7xl">
             Modern <br /> Furniture
           </h1>
-          <h4 className="text-accent text-sm font-sans font-semibold ml-20 mt-10 md:text-lg">
+          <h4 className="text-accent text-sm font-sans font-semibold ml-20 mt-10 md:text-lg ">
             we combine interior and exterior design
             <br /> service and often provide them as a single <br /> solution
           </h4>
