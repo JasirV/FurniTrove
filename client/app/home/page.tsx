@@ -163,7 +163,7 @@ const page = () => {
               <h1 className="text-textcss font-semibold font-sans text-sm md:text-lg leading-snug md:leading-relaxed text-center md:text-left">
                 As in the best seat in the house. Combining comfort and
                 creativity, our smashing range of armchairs features designs to
-                suit any style. Perhaps you&apos;re looking for a mid-century
+                suit any style. Perhaps youre looking for a mid-century
                 masterpiece.
               </h1>
               <button className="bg-secondary p-2 md:p-4 text-xs md:text-sm rounded-lg mt-2 ">
