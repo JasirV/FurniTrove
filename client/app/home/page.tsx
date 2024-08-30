@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import NavBar from "../../components/NavBar";
-import ImgBg from "../../../assets/blue-sofa-removebg-preview.png";
+import ImgBg from "../../../assets/Image.jpg";
 import Image from "next/image";
 import Arrow from "../../../assets/Arrow.png";
 import Chair1 from "../../../assets/chair1.png";
@@ -66,16 +66,16 @@ const page = () => {
           </div>
         </div>
         <div className=" w-1/2 h-screen  overflow-hidden hidden md:grid">
-          <div className="bg-secondary h-2/3 w-2/3 rounded-full relative top-[3px] left-[300px]"></div>
+          <div className="bg-secondary h-2/3 w-2/3 rounded-full relative top-[3px] left-[300px] hidden"></div>
         </div>
       </div>
-      <div className="absolute flex-col justify-center items-center top-48 right-72  h-[430px] w-[770px] hidden md:flex">
+      <div className="absolute flex-col justify-center items-center top-48 right-9 h-[530px] w-[870px] hidden md:flex">
         <Image
           src={ImgBg}
           alt=""
           className="w-full h-full object-cover hidden md:flex "
         />
-        <div className="w-10/12 h-5 bg-secondary rounded-xl absolute top-96 hidden md:flex"></div>
+        <div className="w-10/12 h-5 bg-secondary rounded-xl absolute top-96 hidden"></div>
       </div>
       <div className="flex justify-around mt-10 mb-2 4">
         <div>
