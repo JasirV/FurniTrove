@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import NavBar from "../../components/NavBar";
+import NavBar from "../NavBar";
 import ImgBg from "../../../assets/Image.jpg";
 import Image from "next/image";
 import Arrow from "../../../assets/Arrow.png";
