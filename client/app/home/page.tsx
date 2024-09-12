@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./carouselStyles.css";
 import Footer from "@/components/Footer";
 
-const page = () => {
+const Page = () => {
   type Category =
     | "Living Room"
     | "Bedroom"
@@ -279,4 +279,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
