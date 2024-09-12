@@ -137,7 +137,7 @@ const page = () => {
             <div className="w-full md:w-1/2 h-full p-10 md:p-20  flex flex-col items-center">
               <h1 className="text-textcss font-semibold font-sans text-sm md:text-lg leading-snug md:leading-relaxed text-center md:text-left">
                 Being able to sit back and relax in your favourite armchair is
-                truly one of the greatest feelings in life. That's why we've
+                truly one of the greatest feelings in life. That s why we ve
                 created a stunning range of lovingly handmade luxury armchairs,
                 using only materials of the finest quality to ensure you have
                 the best seat in the house.
