@@ -7,7 +7,7 @@ interface Product {
   price: number;
   category: ProductCategory;
   inStock: boolean;
-//   imageUrl: string;
+  imageUrl: string;
 }
 
 
@@ -19,7 +19,7 @@ export const products: Product[] = [
     price: 499.99,
     category: "Living Room",
     inStock: true,
-    // imageUrl: "https://example.com/images/modern-sofa.jpg"
+    imageUrl: "https://example.com/images/modern-sofa.jpg"
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const products: Product[] = [
     price: 299.99,
     category: "Bedroom",
     inStock: true,
-    // imageUrl: "https://example.com/images/wooden-bed-frame.jpg"
+    imageUrl: "https://example.com/images/wooden-bed-frame.jpg"
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const products: Product[] = [
     price: 399.99,
     category: "Dining Room",
     inStock: false,
-    // imageUrl: "https://example.com/images/dining-table-set.jpg"
+    imageUrl: "https://example.com/images/dining-table-set.jpg"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ export const products: Product[] = [
     price: 159.99,
     category: "Office",
     inStock: true,
-    // imageUrl: "https://example.com/images/ergonomic-office-chair.jpg"
+    imageUrl: "https://example.com/images/ergonomic-office-chair.jpg"
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ export const products: Product[] = [
     price: 699.99,
     category: "Outdoor",
     inStock: true,
-    // imageUrl: "https://example.com/images/outdoor-patio-set.jpg"
+    imageUrl: "https://example.com/images/outdoor-patio-set.jpg"
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ export const products: Product[] = [
     price: 89.99,
     category: "Home Decor",
     inStock: true,
-    // imageUrl: "https://example.com/images/decorative-rug.jpg"
+    imageUrl: "https://example.com/images/decorative-rug.jpg"
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ export const products: Product[] = [
     price: 89.99,
     category: "Home Decor",
     inStock: true,
-    // imageUrl: "https://example.com/images/decorative-rug.jpg"
+    imageUrl: "https://example.com/images/decorative-rug.jpg"
   },
   {
     id: 8,
@@ -82,6 +82,6 @@ export const products: Product[] = [
     price: 89.99,
     category: "Home Decor",
     inStock: true,
-    // imageUrl: "https://example.com/images/decorative-rug.jpg"
+    imageUrl: "https://example.com/images/decorative-rug.jpg"
   },
 ];
