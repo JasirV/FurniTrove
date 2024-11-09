@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiBag1, CiSearch } from 'react-icons/ci'
 import { TiThMenuOutline } from "react-icons/ti";
+import Link from "next/link";
 
 const NavBar = () => {
 
@@ -11,8 +12,8 @@ const NavBar = () => {
           <h1 className='text-accent font-sans font-semibold text-lg mx-2 md:mx-0'>FurniTrove</h1>
         </div>
         <div className='hidden  w-10/12 justify-center gap-16 items-center text-accent md:flex'>
-          <h1>Home</h1>
-          <h1>Products</h1>
+          <h1><Link href='/'>Home</Link></h1>
+          <h1><Link href="/products">Products</Link></h1>
           <h1>Contact</h1>
           <h1>About us</h1>
         </div>

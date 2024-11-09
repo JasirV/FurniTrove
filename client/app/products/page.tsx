@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import api from "../../api/axiosIntespter";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation"; 
 
 interface Product {
   _id: string;
@@ -19,7 +20,7 @@ const Page = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
+  const router = useRouter();
   // State for managing modal visibility and selected product
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -59,6 +60,13 @@ const Page = () => {
     setSelectedProduct(null);
   };
 
+  const addToCart = () => {
+    if (localStorage.getItem('token')) {
+    } else {
+      router.push('/login'); 
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* NavBar Section */}
@@ -68,6 +76,7 @@ const Page = () => {
 
       {/* Products Section */}
       <div className="w-full flex flex-col items-center md:h-full pt-16 px-4 md:px-0">
+       <h1 className="text-4xl font-bold mb-6 text-textcss"> Our Products </h1>
         <div className="flex flex-wrap w-full md:w-11/12 justify-center gap-6 sm:gap-8 md:gap-14">
           {products?.map((product: Product) => (
             <div
@@ -96,10 +105,9 @@ const Page = () => {
 
       {/* Modal */}
       {isModalOpen && selectedProduct && (
-        <Modal product={selectedProduct} onClose={closeModal} />
+        <Modal product={selectedProduct} onClose={closeModal} addToCart={addToCart} />
       )}
 
-      {/* Footer Section */}
       <div className="mt-5">
         <Footer />
       </div>
@@ -112,18 +120,19 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ product, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ product, onClose,addToCart}) => {
+
   return (
     <div
       className="fixed inset-0 bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50"
       onClick={onClose} // Close modal when clicking outside
     >
       <div
-        className=" backdrop-blur-sm p-8  shadow-lg bg-primary rounded-lg w-1/2 cursor-auto"
+        className=" backdrop-blur-sm p-8  shadow-lg bg-primary rounded-lg md:w-1/2 cursor-auto"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
       >
         <div className="flex justify-end">
-            <h1  onClick={onClose} className="text-xl font-semibold text-textcss mr-7 cursor-pointer">x</h1>
+            <h1  onClick={onClose} className="text-xl font-semibold text-textcss md:mr-7 cursor-pointer">x</h1>
         </div>
         <h2 className="text-xl font-semibold mb-4 text-textcss text-center">Product Details</h2>
         <div className="flex flex-col items-center">
@@ -139,8 +148,9 @@ const Modal: React.FC<ModalProps> = ({ product, onClose }) => {
           <p className="mt-4 text-lg text-textcss">{product.productName}</p>
           <p className="text-xl font-bold mt-2 text-textcss">${product.price.toFixed(2)}</p>
           <p className="text-sm  mt-2 text-textcss">${product.description}</p>
-          <button
+          <button 
             className="bg-[#94A8BF] p-1 mt-2 text-xs rounded-lg md:p-3"
+            onClick={addToCart}
           >
             Add To Cart
           </button>
