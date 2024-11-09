@@ -10,15 +10,24 @@ import mirror from "../../../assets/mir.png";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
-import { products } from "../../data/productDetails";
+// import { products } from "../../data/productDetails";
 import Products from "../../data/productsData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carouselStyles.css";
 import Footer from "@/components/Footer";
+import useProductFetching from "@/hooks/useFeching";
 
 const Page = () => {
+
+  interface Product {
+    _id: string;
+    image: string;
+    productName: string;
+    price: number;
+  }
+
   type Category =
     | "Living Room"
     | "Bedroom"
@@ -34,6 +43,7 @@ const Page = () => {
     "Outdoor",
     "Home Decor",
   ];
+  const { data: products, isLoading, isError, error } = useProductFetching();
 
   const settings = {
     className: "center",
@@ -44,6 +54,7 @@ const Page = () => {
     speed: 500,
     initialSlide: 1,
   };
+  console.log(products,'hai')
   return (
     <div>
       <NavBar />
@@ -229,23 +240,23 @@ const Page = () => {
   ))}
 </div>
 
-<div className="w-full flex flex-col items-center md:items-start md:h-screen">
-<div className="flex flex-wrap w-full md:w-11/12 justify-center gap-6 sm:gap-8 md:gap-14">
-    {products.map((product) => (
+<div className="w-full flex flex-col items-center md:h-screen  justify-center">
+<div className="flex flex-wrap w-full md:w-11/12 justify-center gap-6 sm:gap-8 md:gap-14 ">
+    {products?.slice(0,8)?.map((product:Product) => (
       <div
-        key={product.id}
+        key={product._id}
         className="w-36 sm:w-48 md:w-60 border h-60 sm:h-64 md:h-72 flex flex-col items-center p-2 sm:p-3 md:p-4 border-textcss"
       >
         <Image
-          src={product.imageUrl}
-          alt={product.name}
+          src={product.image}
+          alt={product.productName}
           width={240}
           height={160}
-          layout="intrinsic"
           objectFit="cover"
+          className="w-[240px] h-[160px]"
         />
         <h2 className="mt-2 text-xs sm:text-sm md:text-lg font-semibold text-accent text-center">
-          {product.name}
+          {product.productName}
         </h2>
         <p className="text-sm sm:text-lg md:text-xl font-bold mt-1 text-textcss">
           ${product.price.toFixed(2)}

@@ -12,7 +12,7 @@ const NavBar = () => {
         </div>
         <div className='hidden  w-10/12 justify-center gap-16 items-center text-accent md:flex'>
           <h1>Home</h1>
-          <h1>Reviews</h1>
+          <h1>Products</h1>
           <h1>Contact</h1>
           <h1>About us</h1>
         </div>

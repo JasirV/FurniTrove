@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
     images: {
-      domains: ['example.com'],
+      domains: ['m.media-amazon.com','images.unsplash.com', 'cdn.pixabay.com'],
     },
   };
   
