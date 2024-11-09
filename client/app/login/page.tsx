@@ -53,7 +53,7 @@ const Page = () => {
       {/* Shine Border */}
       <ShineBorder
         className='w-2/3 h-3/4 rounded-xl flex z-20 md:shadow-xl border relative'
-        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
       >
         <div className='w-1/2 h-full relative flex max-w-[32rem] items-center justify-center overflow-hidden rounded-lg '>
         

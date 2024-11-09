@@ -104,7 +104,7 @@ const Page: React.FC = () => {
       {/* Shine Border */}
       <ShineBorder
         className='md:w-2/3 w-11/12 h-3/4 rounded-xl flex z-20 md:shadow-xl border relative'
-        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        // color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
       >
         {/* Form Section */}
         <div className='md:w-1/2 w-full h-full flex flex-col justify-center p-2 md:p-10 z-30 relative'>
