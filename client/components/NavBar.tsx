@@ -1,5 +1,7 @@
+
 import React from 'react'
-import { CiBag1, CiSearch } from 'react-icons/ci'
+import { CiBag1, CiSearch, CiUser } from 'react-icons/ci'
+import {AiOutlineLogin  } from 'react-icons/ai'
 import { TiThMenuOutline } from "react-icons/ti";
 import Link from "next/link";
 
@@ -14,12 +16,18 @@ const NavBar = () => {
         <div className='hidden  w-10/12 justify-center gap-16 items-center text-accent md:flex'>
           <h1><Link href='/'>Home</Link></h1>
           <h1><Link href="/products">Products</Link></h1>
-          <h1>Contact</h1>
           <h1>About us</h1>
+          <h1>Contact</h1>
         </div>
         <div className='md:flex hidden w-1/4 justify-center gap-4 items-center text-accent'>
         <CiSearch size={35}/>
-        <CiBag1 size={35}/>
+        <Link href='/cart'>
+        <CiBag1 size={35} />
+        </Link>
+        <CiUser size={35}/>
+        <Link href='/login'>
+        <AiOutlineLogin size={35} />
+        </Link>
         </div>
         <div className='flex md:hidden text-accent mx-2'>
         <TiThMenuOutline size={20} />

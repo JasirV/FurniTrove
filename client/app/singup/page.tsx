@@ -121,7 +121,7 @@ const Page: React.FC = () => {
           {/* Welcome Text */}
           <div className='ml-10 mb-6'>
             <p className='font-medium text-md text-textcss'>
-              <Link href='/singup'>Already have an account?</Link>
+              <Link href='/login'>Already have an account?</Link>
             </p>
           </div>
 

@@ -82,7 +82,7 @@ const Page = () => {
             <div
               key={product._id}
               className="w-36 sm:w-48 md:w-60 border h-60 sm:h-64 md:h-72 flex flex-col items-center p-2 sm:p-3 md:p-4 border-textcss shadow-md rounded-lg cursor-pointer"
-              onClick={() => openModal(product)} // Open modal on product click
+              onClick={() => openModal(product)} 
             >
               <Image
                 src={product.image}
