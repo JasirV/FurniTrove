@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import api from '@/api/axiosIntespter';
 import NavBar from '@/components/NavBar';
 import Image from 'next/image';

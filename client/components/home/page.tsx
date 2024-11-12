@@ -247,9 +247,8 @@ const Page = () => {
 <div className="w-full flex flex-col items-center md:h-screen  justify-center">
 <div className="flex flex-wrap w-full md:w-11/12 justify-center gap-6 sm:gap-8 md:gap-14 ">
     {products?.slice(0,8)?.map((product:Product) => (
-      <Link href='/products'>
+      <Link  key={product._id} href='/products'>
       <div
-        key={product._id}
         className="w-36 sm:w-48 md:w-60 border h-60 sm:h-64 md:h-72 flex flex-col items-center p-2 sm:p-3 md:p-4 border-textcss"
       >
         <Image
